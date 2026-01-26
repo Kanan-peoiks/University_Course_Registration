@@ -11,5 +11,5 @@ public class CourseRequestDto {
     private String courseName;
     private String courseDescription;
     private int credits;
-
+    private Long teacherId;
 }

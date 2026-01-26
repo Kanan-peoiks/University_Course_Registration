@@ -20,18 +20,18 @@ public class Student {
     private Long id;
 
     @NotNull(message = "Zəhmət olmasa xananı doldurun, boş saxlamaq olmaz.")
-    @Column(name = "Name", nullable = false)
+    @Column(name = "StudentName", nullable = false)
     @Size(min = 3, max = 15)
     private String name;
 
     @NotNull(message = "Zəhmət olmasa xananı doldurun, boş saxlamaq olmaz.")
-    @Column(name = "Surname", nullable = false)
+    @Column(name = "StudentSurname", nullable = false)
     @Size(min = 3, max = 25)
     private String surname;
 
     @Email
     @NotNull(message = "Zəhmət olmasa xananı doldurun, boş saxlamaq olmaz.")
-    @Column(name = "Email", nullable = false, unique = true)
+    @Column(name = "StudentEmail", nullable = false, unique = true)
     private String email;
 
 }

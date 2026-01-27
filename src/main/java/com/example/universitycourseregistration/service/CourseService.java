@@ -27,5 +27,7 @@ public interface CourseService {
 
     List<CourseResponseDto> findByCourseNameContaining(String courseName);
 
+    //Adinda "java" olan butun kurslar: "java", "java advanced"
+
 
 }

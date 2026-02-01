@@ -1,7 +1,9 @@
 package com.example.universitycourseregistration.repository;
 
 import com.example.universitycourseregistration.entity.Registration;
+import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
@@ -23,4 +25,15 @@ public interface RegistrationRepository extends JpaRepository<Registration,Long>
     @Query("SELECT r FROM Registration r WHERE r.student.id = :studentId AND r.course.id = :courseId")
     Optional<Registration> findByStudentIdAndCourseId(@Param("studentId") Long studentId,
                                                       @Param("courseId") Long courseId);
+
+    // registration sil
+    @Modifying
+    @Transactional
+    @Query("DELETE FROM Registration r WHERE r.student.id = :studentId AND r.course.id = :courseId")
+    void deleteByStudentIdAndCourseId(@Param("studentId") Long studentId,
+                                      @Param("courseId") Long courseId);
+
+
+
+
 }

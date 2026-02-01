@@ -24,8 +24,8 @@ public interface RegistrationService {
     List<CourseResponseDto> getCoursesByTeacher(Long teacherId);
 
     //delete
-    //unregisterStudentFromCourse -> telebeden kurs silmek
-    void unregisterStudentFromCourse(Long studentId, Long courseId);
+    //deleteByStudentIdAndCourseId -> telebeden kurs silmek
+    void deleteByStudentIdAndCourseId(Long studentId, Long courseId);
 
     //unregisterTeacherFromCourse -> muellimden kurs silmek
     void unregisterTeacherFromCourse(Long teacherId, Long courseId);

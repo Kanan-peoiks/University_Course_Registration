@@ -25,7 +25,7 @@ public class StudentController {
 
     //READ ALL
     @GetMapping
-    public List<StudentResponseDto> getAllStudents(){
+    public List<StudentResponseDto> getAll(){
         return studentService.getAllStudents();
     }
 
@@ -37,14 +37,14 @@ public class StudentController {
 
     //update
     @PutMapping("/{id}")
-    public StudentResponseDto updateStudent(@PathVariable Long id,
+    public StudentResponseDto update(@PathVariable Long id,
                                @RequestBody @Valid StudentRequestDto studentRequestDto) {
         return studentService.updateStudent(id, studentRequestDto);
     }
 
     //delete
     @DeleteMapping("/{id}")
-    public void deleteStudent(@PathVariable Long id){
+    public void delete(@PathVariable Long id){
         studentService.deleteStudent(id);
     }
 
@@ -56,7 +56,7 @@ public class StudentController {
 
     //name + surname
     @GetMapping("/seacrh")
-    public List<StudentResponseDto> findByNameAndSurname(@RequestParam String name,
+    public List<StudentResponseDto> search(@RequestParam String name,
                                                          @RequestParam String surname){
         return studentService.findByNameAndSurname(name, surname);
     }

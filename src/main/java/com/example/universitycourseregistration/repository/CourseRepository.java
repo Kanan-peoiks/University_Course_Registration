@@ -18,4 +18,6 @@ public interface CourseRepository extends JpaRepository<Course,Long> {
     // Course name filter (case-insensitive)
     @Query("SELECT c FROM Course c WHERE LOWER(c.courseName) LIKE LOWER(CONCAT('%', :name, '%'))")
     List<Course> findByCourseNameContaining(@Param("name") String name);
+
+    Long id(Long id);
 }

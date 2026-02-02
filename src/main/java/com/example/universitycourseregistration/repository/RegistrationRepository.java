@@ -1,6 +1,7 @@
 package com.example.universitycourseregistration.repository;
 
 import com.example.universitycourseregistration.entity.Registration;
+import com.example.universitycourseregistration.entity.Student;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -34,6 +35,5 @@ public interface RegistrationRepository extends JpaRepository<Registration,Long>
                                       @Param("courseId") Long courseId);
 
 
-
-
+    Long student(Student student);
 }

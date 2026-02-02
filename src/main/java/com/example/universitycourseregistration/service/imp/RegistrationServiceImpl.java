@@ -122,12 +122,21 @@ public class RegistrationServiceImpl implements RegistrationService {
 
     @Override
     public void unregisterTeacherFromCourse(Long teacherId, Long courseId) {
+        Course course  = courseRepository.findById(courseId).orElseThrow(() ->
+                new CourseNotFoundException("Course not found"));
+
+        if(course.getTeacher() != null && course.getTeacher().getId().equals(teacherId)){
+            course.setTeacher(null);
+            courseRepository.save(course);
+        }
 
     }
 
     @Override
     public boolean isStudentRegistered(Long studentId, Long courseId) {
-        return false;
+        return registrationRepository
+                .findByStudentIdAndCourseId(studentId,courseId)
+                .isPresent();
     }
 
 

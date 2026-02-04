@@ -29,20 +29,20 @@ public class CourseController {
     }
 
     //read by id
-    @GetMapping("/{id}")
+    @GetMapping("/{id:\\d+}")
     public CourseResponseDto getById(@PathVariable Long id){
         return courseService.getById(id);
     }
 
     //update
-    @PutMapping("/{id}")
+    @PutMapping("/{id:\\d+}")
     public CourseResponseDto update(@PathVariable Long id,
                                     @RequestBody @Valid CourseRequestDto dto) {
         return courseService.updateCourse(id, dto);
     }
 
     //delete
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id:\\d+}")
     public void delete(@PathVariable Long id){
         courseService.deleteCourse(id);
     }

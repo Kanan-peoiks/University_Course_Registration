@@ -11,7 +11,7 @@ public interface CourseService {
     CourseResponseDto createCourse(CourseRequestDto courseRequestDto);
 
     //Read
-    List<CourseResponseDto> findAllCourses();
+    List<CourseResponseDto> getAllCourses();
 
     CourseResponseDto getById(Long id);
 

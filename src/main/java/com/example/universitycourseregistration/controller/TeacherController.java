@@ -29,13 +29,13 @@ public class TeacherController {
     }
 
     //read by ID
-    @GetMapping("/{id}")
+    @GetMapping("/{id:\\d+}")
     public TeacherResponseDto getById(@PathVariable Long id) {
         return teacherService.getById(id);
     }
 
     //update
-    @PutMapping("/{id}")
+    @PutMapping("/{id:\\d+}")
     public TeacherResponseDto update(@PathVariable Long id,
                                      @RequestBody @Valid TeacherRequestDto dto) {
         return teacherService.updateTeacher(id, dto);
@@ -43,7 +43,7 @@ public class TeacherController {
 
 
     //delete
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id:\\d+}")
     public void delete(@PathVariable Long id) {
         teacherService.deleteTeacher(id);
     }

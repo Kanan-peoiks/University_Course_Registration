@@ -30,20 +30,20 @@ public class StudentController {
     }
 
     //Read By ID
-    @GetMapping("/{id}")
+    @GetMapping("/{id:\\d+}")
     public StudentResponseDto getById(@PathVariable Long id){
         return studentService.getById(id);
     }
 
     //update
-    @PutMapping("/{id}")
+    @PutMapping("/{id:\\d+}")
     public StudentResponseDto update(@PathVariable Long id,
                                @RequestBody @Valid StudentRequestDto studentRequestDto) {
         return studentService.updateStudent(id, studentRequestDto);
     }
 
     //delete
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id:\\d+}")
     public void delete(@PathVariable Long id){
         studentService.deleteStudent(id);
     }
@@ -55,7 +55,7 @@ public class StudentController {
     }
 
     //name + surname
-    @GetMapping("/seacrh")
+    @GetMapping("/search")
     public List<StudentResponseDto> search(@RequestParam String name,
                                                          @RequestParam String surname){
         return studentService.findByNameAndSurname(name, surname);

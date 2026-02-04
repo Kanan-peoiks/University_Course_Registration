@@ -51,15 +51,15 @@ public class RegistrationController {
 
     //delete
     // delete student`s course
-    @DeleteMapping("/students")
-    public void deleteStudentsCourse (@RequestParam Long studentId,
+    @DeleteMapping("/registration/student")
+    public void deleteStudentCourse (@RequestParam Long studentId,
                         @RequestParam Long courseId){
         registrationService.deleteByStudentIdAndCourseId(studentId, courseId);
     }
 
     //delete teacher`s course
-    @DeleteMapping("/teachers")
-    public void deleteTeachersCourse(@RequestParam Long teacherId,
+    @DeleteMapping("/registration/teacher")
+    public void deleteTeacherCourse(@RequestParam Long teacherId,
                                      @RequestParam Long courseId){
         registrationService.unregisterTeacherFromCourse(teacherId, courseId);
     }

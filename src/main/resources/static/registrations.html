@@ -2,9 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Registrations</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<header>
+    <h1>Registrations Management</h1>
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="students.html">Students</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="courses.html">Courses</a>
+    </nav>
+</header>
+<main>
+    <h2>Register Student to Course</h2>
+    <form id="registrationForm">
+        <label>Student ID</label>
+        <input type="number" id="studentId" required>
+        <label>Course ID</label>
+        <input type="number" id="courseId" required>
+        <button type="submit">Register</button>
+        <div class="error" id="regError"></div>
+    </form>
 
+    <h2>View Registrations</h2>
+    <div>
+        <label>Student ID</label>
+        <input type="number" id="studentCoursesId">
+        <button id="viewStudentCourses">Get Courses</button>
+    </div>
+    <div>
+        <label>Course ID</label>
+        <input type="number" id="courseStudentsId">
+        <button id="viewCourseStudents">Get Students</button>
+    </div>
+
+    <h3>Results</h3>
+    <table id="resultsTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Additional Info</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</main>
+<script src="js/registrations.js"></script>
 </body>
 </html>

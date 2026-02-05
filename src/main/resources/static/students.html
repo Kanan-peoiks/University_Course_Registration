@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Students</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<header>
+    <h1>Students Management</h1>
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="courses.html">Courses</a>
+        <a href="registrations.html">Registrations</a>
+    </nav>
+</header>
+<main>
+    <h2>Students List</h2>
+    <table id="studentsTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Courses</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
 
+    <h2>Add / Update Student</h2>
+    <form id="studentForm">
+        <input type="hidden" id="studentId">
+        <label>Name</label>
+        <input type="text" id="name" required>
+        <label>Surname</label>
+        <input type="text" id="surname" required>
+        <label>Email</label>
+        <input type="email" id="email" required>
+        <button type="submit">Save</button>
+        <div class="error" id="formError"></div>
+    </form>
+
+    <h2>Search Student</h2>
+    <input type="text" id="searchName" placeholder="Name">
+    <input type="text" id="searchSurname" placeholder="Surname">
+    <button id="searchBtn">Search</button>
+</main>
+<script src="js/students.js"></script>
 </body>
 </html>

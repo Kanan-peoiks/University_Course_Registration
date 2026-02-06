@@ -129,9 +129,11 @@ course (Many-to-One)
 
 ## How to Run
 1. Clone
+
 git clone https://github.com/Kanan-peoiks/University_Course_Registration.git
 2. Open in İntelliJ
 3. Configure database
+
 Edit:
 ```
 application.properties
@@ -173,7 +175,9 @@ Through this project I practiced:
 
 ## 👤 Author
 Kanan
+
 GitHub:
+
 https://github.com/Kanan-peoiks
 
 # ⭐ If you like this project, feel free to star the repo!

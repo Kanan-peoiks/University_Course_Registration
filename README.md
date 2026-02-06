@@ -131,8 +131,10 @@ course (Many-to-One)
 1. Clone
 
 git clone https://github.com/Kanan-peoiks/University_Course_Registration.git
+
 2. Open in İntelliJ
-3. Configure database
+
+4. Configure database
 
 Edit:
 ```

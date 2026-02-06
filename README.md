@@ -120,7 +120,7 @@ description
 credits
 teacher (Many-to-One)
 ```
-4.Registration
+4. Registration
 ```
 registrationId
 student (Many-to-One)

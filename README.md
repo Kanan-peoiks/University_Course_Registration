@@ -180,5 +180,5 @@ GitHub:
 
 https://github.com/Kanan-peoiks
 
-# ⭐ If you like this project, feel free to star the repo!
+## ⭐ If you like this project, feel free to star the repo!
 

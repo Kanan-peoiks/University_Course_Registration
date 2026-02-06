@@ -79,3 +79,66 @@ button:hover {
     color: red;
     margin-top: 5px;
 }
+
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* ===== DASHBOARD GRID (2x2 layout) ===== */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #004080;
+}
+
+.card p {
+    margin: 10px 0 15px;
+}
+
+/* card button */
+.card a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #004080;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card a:hover {
+    background-color: #00264d;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #004080;
+    color: white;
+}
+
